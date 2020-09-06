@@ -1,3 +1,4 @@
 #!/bin/sh
 
-docker run -v $(pwd):/app -p 8080:80 webdevops/php-nginx:7.4
+docker build . -t klepon
+docker run -v $(pwd):/app -p 8080:80 klepon
