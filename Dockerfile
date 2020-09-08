@@ -1,4 +1,4 @@
-FROM bigwisu/php-nginx:7.4
+FROM bigwisu/php-nginx:7.4-alpine
 
 RUN rm /opt/docker/etc/nginx/vhost.conf
 RUN rm /opt/docker/etc/nginx/vhost.common.d/10-location-root.conf
