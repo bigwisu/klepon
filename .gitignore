@@ -125,3 +125,5 @@ ci4/results/
 ci4/phpunit*.xml
 ci4/.phpunit.*.cache
 
+container.sh
+

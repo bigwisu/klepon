@@ -1,5 +1,14 @@
 #!/bin/sh
 
-docker rm -f klepon
 docker build . -t klepon
-docker run -v $(pwd):/app --name klepon -p 8080:8080 klepon 
+OUTPUT=$(docker run -d -v $(pwd):/app -p 8080:8080 klepon)
+
+#container.sh script will make it easy to enter container
+tee container.sh << EOF
+#!/bin/sh
+docker exec -it ${OUTPUT} bash
+EOF
+
+chmod 775 container.sh
+
+docker attach ${OUTPUT}
