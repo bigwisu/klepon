@@ -1,0 +1,10 @@
+{
+  "/api/profile": {
+    "target": "http://localhost:3333/",
+    "secure": false
+  },
+  "/api/people": {
+    "target": "http://localhost:3334/",
+    "secure": false
+  }
+}

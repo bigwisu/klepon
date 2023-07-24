@@ -53,7 +53,9 @@
           "browserTarget": "web:build:production"
         },
         "development": {
-          "browserTarget": "web:build:development"
+          "browserTarget": "web:build:development",
+          "proxyConfig": "proxy.config.json",
+          "disableHostCheck": true
         }
       },
       "defaultConfiguration": "development"
