@@ -20,6 +20,12 @@ Learn more about [Nx generators on the docs](https://nx.dev/plugin-features/use-
 
 ## Running tasks
 
+To run multiple projects for development:
+
+```
+nx run-many --parallel --target=serve --projects=svc-profile,svc-people,web
+```
+
 To execute tasks with Nx use the following syntax:
 
 ```
