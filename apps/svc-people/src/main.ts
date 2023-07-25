@@ -14,6 +14,10 @@ app.get('/api/people', (req, res) => {
   res.send({ message: 'Welcome to svc-people!' });
 });
 
+app.get('/api/people/list', (req, res) => {
+  res.send({ message: 'list of people!' });
+});
+
 const port = process.env.PORT || 3334;
 const server = app.listen(port, () => {
   console.log(`Listening at http://localhost:${port}/`);
