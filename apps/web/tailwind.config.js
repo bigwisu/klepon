@@ -8,7 +8,20 @@ module.exports = {
     ...createGlobPatternsForDependencies(__dirname),
   ],
   theme: {
-    extend: {},
+    container: {
+      center: true,
+      padding: '16px', 
+    },
+    extend: {
+        colors: {
+            primary: '#2563EB',
+            dark: '#0f172a',
+            secondary: '#64748b',
+        },
+        screens: {
+            '2xl': '1230px',
+        }
+    }  
   },
   plugins: [],
 };
