@@ -1,3 +1,53 @@
-<h1>Admin</h1>
+<mat-sidenav-container fullscreen class="sidenav-container">
+    <mat-sidenav #sidenav class="sidenav" fixedInViewport
+    [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'"
+    [opened]="(isHandset$ | async) === false">
+    <mat-toolbar>Menu</mat-toolbar>
+        <mat-nav-list role="list">
+            <a mat-list-item routerLink="/app" routerLinkActive="active-link" role="listitem">
+                    <mat-icon>home</mat-icon>
+                    <span>Home</span>
+            </a>
+            <a mat-list-item routerLink="/app/people" routerLinkActive="active-link" role="listitem">
+                <mat-icon>person</mat-icon>
+                <span>People</span>
+            </a>
+            <a mat-list-item routerLink="/app/groups" routerLinkActive="active-link" role="listitem">
+                <mat-icon>groups</mat-icon>
+                <span>Groups</span>
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
 
-<router-outlet></router-outlet>
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <div class="w-full px-gutter flex">
+                <div>
+                    <button mat-icon-button aria-label="Toggle sidenav" mat-icon-button (click)="sidenav.toggle()"
+                        *ngIf="isHandset$ | async">
+                        <mat-icon>menu</mat-icon>
+                    </button>
+                </div>
+                <span class="flex-1"></span>
+                <div class="-mx-1 flex items-center">
+                    <div cclass="px-1">
+                        <a mat-button [matMenuTriggerFor]="profileDropdown">
+                            Ahmad Fulan
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <mat-menu #profileDropdown>
+                <button mat-menu-item>
+                    Profile
+                </button>
+                <button mat-menu-item>
+                    Groups
+                </button>
+            </mat-menu>
+        </mat-toolbar>
+    
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
