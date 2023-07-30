@@ -6,20 +6,24 @@
     <mat-toolbar>Menu</mat-toolbar>
         <mat-nav-list role="list">
             <a mat-list-item routerLink="/app" routerLinkActive="active-link" role="listitem">
-                    <mat-icon>home</mat-icon>
-                    <span>Home</span>
+                <!-- <mat-icon>home</mat-icon> -->
+                <span>Home</span>
             </a>
             <a mat-list-item routerLink="/app/people" routerLinkActive="active-link" role="listitem">
-                <mat-icon>person</mat-icon>
+                <!-- <mat-icon>person</mat-icon> -->
                 <span>People</span>
             </a>
             <a mat-list-item routerLink="/app/groups" routerLinkActive="active-link" role="listitem">
-                <mat-icon>groups</mat-icon>
+                <!-- <mat-icon>groups</mat-icon> -->
                 <span>Groups</span>
             </a>
             <a mat-list-item routerLink="/app/contacts" routerLinkActive="active-link" role="listitem">
-                <mat-icon>import_contacts</mat-icon>
+                <!-- <mat-icon>import_contacts</mat-icon> -->
                 <span>Contacts</span>
+            </a>
+            <a mat-list-item routerLink="/app/address" routerLinkActive="active-link" role="listitem">
+                <!-- <mat-icon>import_contacts</mat-icon> -->
+                <span>Address</span>
             </a>
         </mat-nav-list>
     </mat-sidenav>
@@ -47,7 +51,10 @@
                     Profile
                 </button>
                 <button mat-menu-item>
-                    Groups
+                    Settings
+                </button>
+                <button mat-menu-item routerLink="/">
+                    Logout
                 </button>
             </mat-menu>
         </mat-toolbar>
