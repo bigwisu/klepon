@@ -12,6 +12,11 @@ import { MatCardModule } from '@angular/material/card';
 import { MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSortModule } from '@angular/material/sort';
+import { MatInputModule } from '@angular/material/input';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSelectModule } from '@angular/material/select';
+import { MatRadioModule } from '@angular/material/radio';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { AdminRoutingModule } from './admin-routing.module';
 import { AdminComponent } from './admin.component';
@@ -19,6 +24,7 @@ import { PeopleComponent } from './people/people.component';
 import { GroupsComponent } from './groups/groups.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ContactsComponent } from './contacts/contacts.component';
+import { AddressComponent } from './address/address.component';
 
 @NgModule({
   imports: [
@@ -34,7 +40,12 @@ import { ContactsComponent } from './contacts/contacts.component';
     MatCardModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatInputModule,
+    MatButtonModule,
+    MatSelectModule,
+    MatRadioModule,
+    ReactiveFormsModule
   ],
   providers: [],
   declarations: [
@@ -42,7 +53,8 @@ import { ContactsComponent } from './contacts/contacts.component';
     PeopleComponent, 
     GroupsComponent,
     DashboardComponent,
-    ContactsComponent
+    ContactsComponent,
+    AddressComponent
   ],
 })
 export class AdminModule {}
