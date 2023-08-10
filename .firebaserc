@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "batagor": {
+      "hosting": {
+        "web": [
+          "klepon-e36c3"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "batagor"
+  }
+}
