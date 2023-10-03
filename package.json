@@ -3,9 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
-    "build:web:prod": "nx run web:build",
+    "build:web": "nx run web:build",
     "serve:web:dev": "nx run web:serve:development",
-    "deploy:web:dev": "firebase deploy --only hosting"
+    "deploy:web:dev": "npm run build:web && firebase deploy --only hosting"
   },
   "private": true,
   "dependencies": {
