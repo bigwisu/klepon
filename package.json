@@ -2,7 +2,11 @@
   "name": "@klepon/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build:web:prod": "nx run web:build",
+    "serve:web:dev": "nx run web:serve:development",
+    "deploy:web:dev": "firebase deploy --only hosting"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~16.1.0",
